@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Gallery 💖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<nav class="nav"><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="story.html">Our Story</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="letter.html">Letter</a></li>
+<li><a href="reasons.html">Reasons</a></li>
+<li><a href="game.html">Game</a></li>
+<li><a href="timer.html">Timer</a></li>
+<li><a href="future.html">Future</a></li>
+<li><a href="music.html">Music</a></li>
+<li><a href="confession.html">Confession</a></li>
+</ul></nav>
+
+<main>
+
+<h1 class="title">Gallery 💖</h1>
+<div class="gallery" style="margin-top:2rem"><div class="polaroid" data-src="/image/Screenshot_20260327-211904.png"><img src="/image/Screenshot_20260327-211904.png" alt="Sun & you" loading="lazy"><p>ML</p></div>
+<div class="polaroid" data-src="/image/Screenshot_20260504-205538_1.png"><img src="/image/Screenshot_20260504-205538_1.png" alt="That smile" loading="lazy"><p>Evidence haha</p></div>
+<div class="polaroid" data-src="/image/Messenger_creation_4DCAAE5D-7065-4716-813E-F11B6E8EA25F.jpeg"><img src="/image/Messenger_creation_4DCAAE5D-7065-4716-813E-F11B6E8EA25F.jpeg" alt="Adventure mode" loading="lazy"><p>asawak haha</p></p></div>
+<div class="polaroid" data-src="/image/Messenger_creation_58BA4C5D-0B89-4D14-A119-1BFEB880D236.jpeg"><img src="/image/Messenger_creation_58BA4C5D-0B89-4D14-A119-1BFEB880D236.jpeg" alt="Lazy afternoon" loading="lazy"><p>latina haha</p></div>
+<div class="polaroid" data-src="/image/Messenger_creation_747AB73F-D56C-4C3A-A213-2CC34C893F39.jpeg"><img src="/image/Messenger_creation_747AB73F-D56C-4C3A-A213-2CC34C893F39.jpeg" alt="Golden hour" loading="lazy"><p>nakaka inlove</p></div>
+<div class="polaroid" data-src="/image/Messenger_creation_8399860C-75F0-46B5-A7A0-1F4AD781E7A7.jpeg"><img src="/image/Messenger_creation_8399860C-75F0-46B5-A7A0-1F4AD781E7A7.jpeg" alt="Just because" loading="lazy"><p>sakin kalang wen haha</p></div>
+<div class="polaroid" data-src="/image/Messenger_creation_DC68A4AD-C3AC-4150-B5E8-526EBC67072B.jpeg"><img src="/image/Messenger_creation_DC68A4AD-C3AC-4150-B5E8-526EBC67072B.jpeg" alt="Late nights" loading="lazy"><p>Late nights</p></div>
+<div class="polaroid" data-src="/image/Messenger_creation_C5992814-3E2A-4CD2-9EB3-E675795489FB.jpeg"><img src="/image/Messenger_creation_C5992814-3E2A-4CD2-9EB3-E675795489FB.jpeg" alt="Our place" loading="lazy"><p>Our place</p></div>
+<div class="polaroid" data-src="/image/Screenshot_20260415-190311_1.png"><img src="/image/Screenshot_20260415-190311_1.png" alt="Forever" loading="lazy"><p>Forever</p></div></div>
+<div class="modal" id="modal"><img id="modalImg" alt=""></div>
+
+</main>
+<footer>Made with <span style="color:var(--primary)">💚</span> for you</footer>
+<script src="script.js"></script>
+<script>
+const m=document.getElementById('modal'),mi=document.getElementById('modalImg');
+document.querySelectorAll('.polaroid').forEach(p=>p.addEventListener('click',()=>{mi.src=p.dataset.src;m.classList.add('open');}));
+m.addEventListener('click',()=>m.classList.remove('open'));
+</script>
+</body></html>

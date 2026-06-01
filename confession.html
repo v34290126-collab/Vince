@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Confession 💬</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<nav class="nav"><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="story.html">Our Story</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="letter.html">Letter</a></li>
+<li><a href="reasons.html">Reasons</a></li>
+<li><a href="game.html">Game</a></li>
+<li><a href="timer.html">Timer</a></li>
+<li><a href="future.html">Future</a></li>
+<li><a href="music.html">Music</a></li>
+<li><a href="confession.html">Confession</a></li>
+</ul></nav>
+
+<main>
+
+<h1 class="title">My Confession 💬</h1>
+<div class="confession" style="margin-top:2rem">
+<p data-i="0">There's something I want you to know — really know.</p>
+<p data-i="1">Loving you isn't a phase. It isn't a feeling I'm waiting to fade.</p>
+<p data-i="2">It's the quiet certainty I wake up with. The reason small things feel big.</p>
+<p data-i="3">You are my softest place and my bravest reason.</p>
+<div class="finale" id="finale">Kung uulitin ko lahat… ikaw pa rin pipiliin ko.</div>
+<p id="signoff" style="margin-top:1rem;color:var(--primary)">— forever yours 💚</p>
+</div>
+
+</main>
+<footer>Made with <span style="color:var(--primary)">💚</span> for you</footer>
+<script src="script.js"></script>
+<script>
+const ps=document.querySelectorAll('.confession p[data-i]');
+ps.forEach((p,i)=>setTimeout(()=>p.classList.add('show'),(i+1)*1500));
+setTimeout(()=>{document.getElementById('finale').classList.add('show');document.getElementById('signoff').classList.add('show');},(ps.length+1)*1500);
+</script>
+</body></html>

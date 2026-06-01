@@ -1,0 +1,50 @@
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Time Since Us ⏳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<nav class="nav"><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="story.html">Our Story</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="letter.html">Letter</a></li>
+<li><a href="reasons.html">Reasons</a></li>
+<li><a href="game.html">Game</a></li>
+<li><a href="timer.html">Timer</a></li>
+<li><a href="future.html">Future</a></li>
+<li><a href="music.html">Music</a></li>
+<li><a href="confession.html">Confession</a></li>
+</ul></nav>
+
+<main>
+
+<p style="text-align:center;color:var(--muted)">Time since naging tayo</p>
+<h1 class="title">❤️ and counting ❤️</h1>
+<div class="timer">
+  <div class="cell"><div class="num" id="d">00</div><div class="lab">Days</div></div>
+  <div class="cell"><div class="num" id="h">00</div><div class="lab">Hours</div></div>
+  <div class="cell"><div class="num" id="m">00</div><div class="lab">Minutes</div></div>
+  <div class="cell"><div class="num" id="s">00</div><div class="lab">Seconds</div></div>
+</div>
+<p style="text-align:center;margin-top:2rem">…and I'm still not over you. 💚</p>
+
+</main>
+<footer>Made with <span style="color:var(--primary)">💚</span> for you</footer>
+<script src="script.js"></script>
+<script>
+// Edit this date 💚
+const START=new Date("2026-04-02T00:00:00").getTime();
+function pad(n){return String(n).padStart(2,'0')}
+function tick(){
+  const diff=Math.max(0,Date.now()-START);
+  document.getElementById('d').textContent=Math.floor(diff/86400000);
+  document.getElementById('h').textContent=pad(Math.floor(diff/3600000)%24);
+  document.getElementById('m').textContent=pad(Math.floor(diff/60000)%60);
+  document.getElementById('s').textContent=pad(Math.floor(diff/1000)%60);
+}
+tick();setInterval(tick,1000);
+</script>
+</body></html>
