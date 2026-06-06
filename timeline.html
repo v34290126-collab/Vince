@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Timeline · For My Love</title>
+<meta name="description" content="A premium romantic story made just for you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<section class="container">
+  <h1 class="page-title">Something Happened Today</h1>
+  <p class="page-subtitle">Little moments, written down.</p>
+  <div class="gallery-actions">
+    <button class="btn" id="addEventBtn"><i class="fa-solid fa-plus"></i> Add Event</button>
+  </div>
+  <div id="feedEmpty" class="glass empty">
+    <i class="fa-regular fa-clock"></i>
+    <p>No events yet. Add the first one.</p>
+  </div>
+  <div class="feed" id="feed"></div>
+</section>
+
+<div class="modal-overlay" id="evtModal">
+  <form class="modal" id="evtForm">
+    <h3>New Event</h3>
+    <p class="sub">The date and time will be saved automatically.</p>
+<div class="field">
+  <label>Title</label>
+  <input
+    type="text"
+    name="title"
+    placeholder="Special Day ❤️"
+    required
+  >
+</div>
+
+<div class="field">
+  <label>Description</label>
+  <textarea
+    name="msg"
+    placeholder="Today we watched the sunset together..."
+    required
+  ></textarea>
+</div>
+    <div class="modal-actions">
+      <button type="button" class="btn ghost" id="evtCancel">Cancel</button>
+      <button type="submit" class="btn"><i class="fa-solid fa-feather"></i> Save</button>
+    </div>
+  </form>
+</div>
+
+</main>
+<footer>Crafted with love &mdash; for Althea Nicole</footer>
+<script src="script.js"></script>
+<script>initTimeline();</script>
+</body>
+</html>

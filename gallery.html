@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gallery · For My Love</title>
+<meta name="description" content="A premium romantic story made just for you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<section class="container">
+  <h1 class="page-title">Memory Gallery</h1>
+  <p class="page-subtitle">Every moment, kept close.</p>
+  <div class="gallery-actions">
+    <button class="btn" id="addMemBtn"><i class="fa-solid fa-plus"></i> Add Memory</button>
+  </div>
+  <div id="memEmpty" class="glass empty">
+    <i class="fa-regular fa-images"></i>
+    <p>No memories yet. Add your first one above.</p>
+  </div>
+  <div class="gallery-grid" id="memGrid"></div>
+</section>
+
+<div class="modal-overlay" id="memModal">
+  <form class="modal" id="memForm">
+    <h3>Add a Memory</h3>
+    <p class="sub">Keep this moment forever.</p>
+    <div class="field">
+      <label>Photo</label>
+      <label class="file-drop">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        <span>Tap to choose an image</span>
+        <input type="file" accept="image/*" id="memFile" required>
+      </label>
+      <div class="preview" id="memPreview"></div>
+    </div>
+    <div class="field">
+      <label>Date</label>
+      <input type="date" name="date" required>
+    </div>
+    <div class="field">
+      <label>Description</label>
+      <textarea name="desc" placeholder="Tell the story of this moment..." required></textarea>
+    </div>
+    <div class="modal-actions">
+      <button type="button" class="btn ghost" id="memCancel">Cancel</button>
+      <button type="submit" class="btn"><i class="fa-solid fa-heart"></i> Save</button>
+    </div>
+  </form>
+</div>
+
+</main>
+<footer>Crafted with love &mdash; for Althea Nicole</footer>
+<script src="script.js"></script>
+<script>initGallery();</script>
+</body>
+</html>
